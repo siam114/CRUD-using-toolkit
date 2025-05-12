@@ -5,6 +5,7 @@ import Error from './../pages/Error';
 import Navbar from '../layouts/Navbar';
 import BooksView from '../features/books/BooksView';
 import AddBook from '../features/books/AddBook';
+import Footer from './../layouts/Footer';
 
 const Index = () => {
   return <BrowserRouter>
@@ -17,6 +18,7 @@ const Index = () => {
         <Route path="*" element={<Error/>}/>
      </Routes>
     </main>
+    <Footer/>
   </BrowserRouter>
 }
 
