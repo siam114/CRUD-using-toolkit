@@ -9,12 +9,14 @@ import AddBook from '../features/books/AddBook';
 const Index = () => {
   return <BrowserRouter>
   <Navbar/>
-     <Routes>
+    <main>
+       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/show-books" element={<BooksView/>}/>
         <Route path="/add-book" element={<AddBook/>}/>
         <Route path="*" element={<Error/>}/>
      </Routes>
+    </main>
   </BrowserRouter>
 }
 
