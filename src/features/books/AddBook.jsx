@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { addBook } from './BooksSlice'
 
 const AddBook = () => {
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
+  const dispatch = useDispatch()
 
   const numberOfBooks = useSelector((state) => state.booksReducer.books.length)
 
   const handleSubmit = (e) =>{
     e.preventDefault();
     const book = {id: numberOfBooks + 1, title, author}
+    dispatch(addBook(book));
   }
 
   return (
