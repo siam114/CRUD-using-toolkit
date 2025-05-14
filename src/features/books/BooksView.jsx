@@ -31,7 +31,7 @@ const BooksView = () => {
                 <td>{title}</td>
                 <td>{author}</td>
                 <td>
-                  <Link to='/edit-book'><button>Edit</button></Link>
+                  <Link to='/edit-book' state={{id,title,author}}><button>Edit</button></Link>
                   <button onClick={()=>{handleDelete(id)}}>Delete</button>
                 </td>
               </tr>
