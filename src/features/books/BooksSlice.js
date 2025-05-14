@@ -15,6 +15,14 @@ export const bookSlice = createSlice({
         addBook: (state, action) => {
             state.books.push(action.payload);
         },
+        updateBook: (state, action) => {
+            const { id, title, author } = action.payload;
+            const isBookExists = state.books.filter((book) => book.id === id);
+            if(isBookExists){
+                isBookExists[0].title = title;
+                isBookExists[0].author = author;
+            }
+        },
         deleteBook: (state, action) => {
             const bookId = action.payload;
             state.books = state.books.filter((book) => book.id !== bookId);
