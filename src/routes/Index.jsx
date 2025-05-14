@@ -6,6 +6,7 @@ import Navbar from '../layouts/Navbar';
 import BooksView from '../features/books/BooksView';
 import AddBook from '../features/books/AddBook';
 import Footer from './../layouts/Footer';
+import EditBook from '../features/books/EditBook';
 
 const Index = () => {
   return <BrowserRouter>
@@ -15,6 +16,7 @@ const Index = () => {
         <Route path="/" element={<Home/>}/>
         <Route path="/show-books" element={<BooksView/>}/>
         <Route path="/add-book" element={<AddBook/>}/>
+        <Route path="/edit-book" element={<EditBook/>}/>
         <Route path="*" element={<Error/>}/>
      </Routes>
     </main>
